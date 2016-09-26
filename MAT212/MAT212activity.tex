@@ -55,7 +55,9 @@ B=\answer{0}
 
 \begin{eqnarray*}
 x^2+1&=&\answer{(x-1)^2}A+\answer{x(x-1)}B+\answer{x}C\\
-x^2+1&=&(\answer{1}A+\answer{1}B+\answer{0}C)x^2+(\answer{-2}a+\answer{-1}B+\answer{1}C)x+(\answer{1}A+\answer{0}B+\answer{0}C)
+x^2+1&=&(\answer{1}A+\answer{1}B+\answer{0}C)x^2\\
+&&+(\answer{-2}a+\answer{-1}B+\answer{1}C)x\\
+&&+(\answer{1}A+\answer{0}B+\answer{0}C)
 \end{eqnarray*}
 
 Recall that we observed that this was an equality of functions.  Specifically it's an equality of quadratic functions.  Any pair of polynomials, including quadratics, are equal if and only if their coefficients are equal.  Thus, we are able to obtain the following system of equations:
@@ -69,14 +71,15 @@ Which has solution: $A=\answer{1}, B=\answer{0}, C=\answer{2}$.
 
 Either way you go, this gives us the decomposition:
 
-\begin{align*}
-\frac{x^2+1}{x^3-2x^2+x}&\ =\ \frac{A}{x}+\frac{B}{x-1}+\frac{C}{(x-1)^2}= \frac{\answer{1}}{x}+\frac{\answer{0}}{x-1}+\frac{\answer{2}}{(x-1)^2}\\
-\intertext{Then we integrate both sides:}
-\int \frac{x^2+1}{x^3-2x^2+x}\ dx &\ =\ \int \frac{\answer{1}}{x}+\frac{\answer{0}}{x-1}+\frac{\answer{2}}{(x-1)^2}\ dx\\
-\intertext{By the linearity of integration:}
-&\ =\ \int \frac{\answer{1}}{x}\ dx+\int \frac{\answer{0}}{x-1}\ dx+\int\frac{\answer{2}}{(x-1)^2}\ dx\\
-&\ = \ \answer{\ln|x|}+\answer{0}+\answer{\frac{-2}{x-2}}+C
-\end{align*}
+\begin{eqnarray*}
+\frac{x^2+1}{x^3-2x^2+x}&=& \frac{A}{x}+\frac{B}{x-1}+\frac{C}{(x-1)^2}\\
+&=& \frac{\answer{1}}{x}+\frac{\answer{0}}{x-1}+\frac{\answer{2}}{(x-1)^2}\\
+&&\text{Then we integrate both sides:}\\
+\int \frac{x^2+1}{x^3-2x^2+x}\ dx &=& \int \frac{\answer{1}}{x}+\frac{\answer{0}}{x-1}+\frac{\answer{2}}{(x-1)^2}\ dx\\
+&&\text{By the linearity of integration:}\\
+&=& \int \frac{\answer{1}}{x}\ dx+\int \frac{\answer{0}}{x-1}\ dx+\int\frac{\answer{2}}{(x-1)^2}\ dx\\
+&=& \answer{\ln|x|}+\answer{0}+\answer{\frac{-2}{x-2}}+C
+\end{eqnarray*}
 
 
 
@@ -165,24 +168,27 @@ As our cylinders expand, our radii begin at $x=\answer{0}$ and stop when $y=\ans
 
 \end{enumerate}
 
-\begin{question}
-As $n\to \infty$ what is the behavior of the $n$th partial sum of the Taylor series for $\sin(x)$?
 \end{question}
 
+
+
+\begin{question}
+As $n\to \infty$ what is the behavior of the $n$th partial sum of the Taylor series for $\sin(x)$?
+
 \begin{explanation}
-This ``question" really is a thinly veiled excuse to include another Desmos graph:
+This ``question" really is a thinly veiled excuse to link to another Desmos graph:
 
 \begin{onlineOnly}
-$$\graph[ymin=-2,ymax=2, panel]{y=\sin(x), S=\sum_{i=0}^n ((-1)^ix^{2i+1}/(2i+1)!),n=0}$$
+$$\graph[ymin=-2,ymax=2, panel]{y=\sin(x)}$$
 \end{onlineOnly}
-( \href{https://www.desmos.com/calculator/rv7resdzuu}{A link to a larger more functional version of this graph is here}.)
+( The above graph is a graph of $y=\sin(x)$.  Click on \url{https://www.desmos.com/calculator/rv7resdzuu} to see a  version of this graph which displays the partial sums of the Taylor expansion.  Use the slider to control the degree of the expansion.)
 
 
 We learn that as we take Taylor polynomials of larger and larger degree, that the behavior of the polynomials more closely resembles the behavior of the underlying function, particularly near the center of the expansion.  In the above Desmos graph, the slider $n$ controls the degree of the Taylor expansion.  As we increase $n$, we can see in real-time the change of behavior of the Taylor polynomials and how quickly, they begin to converge to $\sin(x)$ particularly about $x=0$.
 
 How cool is that?
 
-\
+
 \begin{multipleChoice}
 \choice[correct]{That is extremely cool!}
 \choice{I don't like cool things.}
@@ -192,9 +198,9 @@ How cool is that?
 
 
 \end{explanation}
-
-
 \end{question}
+
+
 
 
 

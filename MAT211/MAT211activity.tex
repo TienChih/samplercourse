@@ -18,7 +18,7 @@ Some sample questions that can be related to MAT 211, Calculus I.
 Consider the function $f(x)=\begin{cases}x+1 & x<3 \\ -\frac{x^2}{3}+8 & x\geq 3\end{cases}$.
 
 \begin{onlineOnly}
-$$\graph[xmin=-10,xmax=10]{x+1\{x<3\},-x^2/3+8\{x\geq 3\}}$$
+$$\graph[xmin=-10,xmax=10]{x+1\left\{x<3\right\}, \frac{x^2}{3}-8\left\{x\ge 3\right\}}$$
 \end{onlineOnly}
 
 
@@ -65,18 +65,18 @@ Recall that the difference quotient for any function $f$ when $x=a$ and given so
 \item The difference quotient for $f$ when $x=3$ and $h=0.1$ is approximately $\answer[ ]{0.2863}$ (Round to four decimal places).\\ \\
 \item We will now compute the limit definition of the derivative of $ f'(x):={\displaystyle \lim_{h\to 0}} \frac{f(x+h)-f(x)}{h}$.
 
-\begin{align*}
-f'(x)={\displaystyle \lim_{h\to 0}} \frac{f(x+h)-f(x)}{h}&\ =\ \displaystyle \lim_{h\to 0}\frac{(\answer{\sqrt{x+h}})-(\answer{\sqrt{x}})}{h}\\
-\intertext{We would like to evaluate $h=0$, but doing so now would cause us to have a 0 denominator.  In order to dal with the $h$ in the denominator, we must simplify the numerator algebraically.  A familiar way to do this is through conjugation:}\\
-&\ =\ \displaystyle \lim_{h\to 0}\frac{(\answer{\sqrt{x+h}})-(\answer{\sqrt{x}})}{h}\cdot \frac{\answer{\sqrt{x+h}}+\answer{\sqrt{x}}}{\answer{\sqrt{x+h}}+\answer{\sqrt{x}}}\\
-\intertext{So by difference of squares:}
-&\ =\ \displaystyle \lim_{h\to 0}\frac{(\answer{x+h})-(\answer{x})}{h\left(\answer{\sqrt{x+h}+\sqrt{x}}\right)}\\
-&\ =\ \displaystyle \lim_{h\to 0}\frac{\answer{h}}{h\left(\answer{\sqrt{x+h}+\sqrt{x}}\right)}\\
-\intertext{Then by cancelling $h$:}
-&\ =\ \displaystyle \lim_{h\to 0}\frac{\answer{1}}{\left(\answer{\sqrt{x+h}+\sqrt{x}}\right)}\\
-\intertext{Now we can evaluate $h=0$ without dividing by zero!}
-&\ =\frac{\answer{1}}{\answer{\sqrt{x}}+\answer{\sqrt{x}}}= \answer{\frac{1}{2\sqrt{x}}}
-\end{align*}
+\begin{eqnarray*}
+f'(x)={\displaystyle \lim_{h\to 0}} \frac{f(x+h)-f(x)}{h}&=& \displaystyle \lim_{h\to 0}\frac{(\answer{\sqrt{x+h}})-(\answer{\sqrt{x}})}{h}\\
+&&\text{We must remove the zero divisor. }\\ && \text{A familiar way to do this is through conjugation:}\\
+&=& \displaystyle \lim_{h\to 0}\frac{(\answer{\sqrt{x+h}})-(\answer{\sqrt{x}})}{h}\cdot \frac{\answer{\sqrt{x+h}}+\answer{\sqrt{x}}}{\answer{\sqrt{x+h}}+\answer{\sqrt{x}}}\\
+&&\text{So by difference of squares:}\\
+&=& \displaystyle \lim_{h\to 0}\frac{(\answer{x+h})-(\answer{x})}{h\left(\answer{\sqrt{x+h}+\sqrt{x}}\right)}\\
+&=& \displaystyle \lim_{h\to 0}\frac{\answer{h}}{h\left(\answer{\sqrt{x+h}+\sqrt{x}}\right)}\\
+&&\text{Then by cancelling $h$:}\\
+&=& \displaystyle \lim_{h\to 0}\frac{\answer{1}}{\left(\answer{\sqrt{x+h}+\sqrt{x}}\right)}\\
+&&\text{Now we can evaluate $h=0$ without dividing by zero!}\\
+&=&\frac{\answer{1}}{\answer{\sqrt{x}}+\answer{\sqrt{x}}}= \answer{\frac{1}{2\sqrt{x}}}
+\end{eqnarray*}
 
 
 \end{enumerate}
@@ -155,9 +155,9 @@ That's not good!  But it get's worse.  What about when you're 5 feet off the gro
 Consider $f(x)=x^2-3x$
 
 \begin{onlineOnly}
-$$\graph[xmin=-1, xmax=7, panel]{f(x)=x^2-3x,a=0,b=6,U=\max(0, f(x)), D=\min(0, f(x)), 0<y<U\{a<x<b\},a<x<b\{D<y<0\},\int_a^b f(x) dx}$$
+$$\graph[xmin=-1, xmax=7, panel]{f(x)=x^2-3x}$$
 \end{onlineOnly}
-(The above graph shows the region bounded between $f(x)$ and the $x$ axis within the bounds $a=0$ and $b=6$.  You may adjust $a,b$ or $f(x)$ and it will show that region and compute the definite integral. Go  \href{https://www.desmos.com/calculator/o2jdhyeocq}{here for a version of this graph that visualizes and computes  the Riemann sums}.  Use $a, b$ to adjust your end points, $n$ for the number of rectangles, and $c$ for the method (left, right or midpoint).)
+(The above graph shows the curve $y=f(x)$. Go  \url{https://www.desmos.com/calculator/o2jdhyeocq} for a version of this graph that visualizes and computes  the Riemann sums.  Use $a, b$ to adjust your end points, $n$ for the number of rectangles, and $c$ for the method (left, right or midpoint).  One may also adjust $f(x)$ to do the same for other graphs.)
 
 
 \begin{enumerate}
