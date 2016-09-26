@@ -1,0 +1,254 @@
+\documentclass{ximera}
+      
+\title{MAT 200 (Applied Statistics) Activity}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+Some sample questions that can be related to MAT 200 (Applied Statistics).
+      
+\end{abstract}
+      
+\maketitle
+      
+      
+      
+\begin{question}
+Suppose average salary of Imaginary College faculty were \$45,000 with a standard deviation of $\$2,000$.
+
+\begin{enumerate}
+\item Use Chebyshev's Inequality to determine the proportion of Imaginary College faculty who make between \$40,000 and \$50,000.\\ 
+
+\begin{explanation}
+We note that $50,000-45,000=45,000-40,000=\answer[]{5000}$.  Thus, the number of standard deviations from the mean by which our endpoints extend is $k$, where $k\sigma=\answer[]{5000}$.  From this, we determine that $k=\answer[]{2.5}$.\\
+
+Then, Chebyshev's Inequality tells us that the proportion of data in this range is at least $$1-\frac{1}{k^2}=1-\frac{1}{\answer[]{2.5^2}}\approx \answer[]{84}\%\ \text{(round to 2 decimal places)}$$
+\end{explanation}
+
+\item Use Chebyshev's Inequality to determine an interval of salaries such that at least 80\% of salaries land in this interval.
+
+\begin{explanation}
+We note that by Chebyshev's inequality, the proportion of data in the interval we are trying to find is at least $1-\frac{1}{k^2}=0.8$.  Thus, we have that $k\approx \answer[]{2.2361}$ (round to 4 decimal places)
+
+Thus, our end points are $k\sigma=\answer[]{4472.2}$ dollars away from the mean, which gives us the interval $[\answer[]{40527.8}, \answer[]{49472.2}]$.
+\end{explanation}
+\end{enumerate}
+
+\end{question}
+
+
+\begin{question}
+Consider  \href{https://www.washingtonpost.com/amphtml/news/post-nation/wp/2016/07/11/arent-more-white-people-than-black-people-killed-by-police-yes-but-no/}{this Washington Post article}.\\
+
+According to the article, since January 1st 2015, out of 1495 people who were shot by police officers, 732 were white,  381 were black and 382 were of another or unknown race.    According to the \href{https://www.census.gov/content/dam/Census/library/publications/2015/demo/p25-1143.pdf}{US census} out of $318.748$ million people, $254.009$ million people were identified as white and $45.562$ as black.
+
+Given a random American, let $B$ denote the event ``is black", $W$ the event ``is white", $S$ the event ``shot by police".
+
+\begin{enumerate}
+\item What is $P(W)$? 
+\begin{explanation}
+We note that $P(W)$ denotes the probability that any randomly chosen American is white.  There are $\answer{318748000}$ Americans, out of which $\answer{254009000}$ are white.  Thus:
+\end{explanation}
+
+
+
+\  $ \begin{prompt}
+    P(W)= \answer{0.7969}
+  \end{prompt}$ (round to 4 decimal places)
+  
+  Following this idea, consider the next two problems:
+  
+\item What is $P(B)?$\ $ \begin{prompt}
+    P(B)= \answer{0.1429}
+  \end{prompt}$ (round to 4 decimal places)
+\item What is $P(S)?$ 
+$\begin{prompt}
+P(S)= \answer{0.4690}\cdot 10^{-5}
+\end{prompt}$ (round to 4 decimal places).
+
+
+
+\item What is the $P(W|S)?$ 
+
+This is the probability that assuming or given that someone was shot, that they were white.  We see that $\answer{1495}$ people were shot, out of whom $\answer{732}$ were white.  Thus:
+
+
+$\begin{prompt}
+    P(W|S)= \answer{0.4896}
+  \end{prompt}$ (round to 4 decimal places)
+  
+  Following this idea compute the next few problems:
+  
+  
+\item What is the $P(B|S)?$ $\begin{prompt}
+    P(B|S)= \answer{0.2548}
+  \end{prompt}$ (round to 4 decimal places)
+
+\item What is $P(S|W)?$ $\begin{prompt} P(S|W)= \answer{0.2882}\cdot 10^{-5} \end{prompt}$ (round to 4 decimal places).
+\item What is $P(S|B)?$ $\begin{prompt}P(S|B)= \answer{0.8362}\cdot 10^{-5} \end{prompt}$ (round to 4 decimal places).
+
+\item Which of the above represents the probability a randomly chosen citizen is white?
+
+  \begin{multipleChoice}
+\choice[correct]{$P(W)$}
+\choice{$P(B)$}
+\choice{$P(S)$}
+\choice{$P(W|S)$}
+\choice{$P(B|S)$}
+\choice{$P(S|W)$}
+\choice{$P(S|B)$}
+  \end{multipleChoice}
+
+\item Which of the above represents the probability a randomly chosen citizen who was shot by the police also happened to be white?
+
+  \begin{multipleChoice}
+\choice{$P(W)$}
+\choice{$P(B)$}
+\choice{$P(S)$}
+\choice[correct]{$P(W|S)$}
+\choice{$P(B|S)$}
+\choice{$P(S|W)$}
+\choice{$P(S|B)$}
+  \end{multipleChoice}
+
+\item Which of the above represents the probability a randomly chosen black citizen  was also  shot by the police?
+
+  \begin{multipleChoice}
+\choice{$P(W)$}
+\choice{$P(B)$}
+\choice{$P(S)$}
+\choice{$P(W|S)$}
+\choice{$P(B|S)$}
+\choice{$P(S|W)$}
+\choice[correct]{$P(S|B)$}
+  \end{multipleChoice}
+  
+\end{enumerate}
+
+\end{question}
+
+
+\begin{question}
+Suppose that Kaia applies to four jobs, and she figures she has a 40\% chance of landing an interview for each position. Let $X$ denote the number of interviews that she obtains.
+
+\begin{enumerate}
+\item We notice that $X$ is a binomial random variable.  To which of the following to we attribute this?  Select all that apply.
+
+
+\begin{selectAll}
+\choice[correct]{There are a fixed number of trials}
+\choice{The trials are mutually exclusive}
+\choice[correct]{The trials are independent}
+\choice{Each trial has four outcomes (1 for each job)}
+\choice[correct]{Each trial has two outcomes}
+\choice[correct]{Each trial has the same probability of success}
+\end{selectAll}
+
+
+\item Fill out the probability distribution table for $X$ (round to 4 decimal places):
+$$
+\begin{tabular}{c|cccc}
+$X$ & 0 & 1 & 2 & 3 \\
+\hline
+$P(X)$ & $\answer[]{0.216}$ & $\answer[]{0.432}$ & $\answer[]{0.288}$ & $\answer[]{0.064}$
+\end{tabular}
+$$
+\item What is the expected number of interviews she will have?   $\begin{prompt}
+    E(X)= \answer{1.6}
+  \end{prompt}$ (round to 4 decimal places)
+
+\item Find the standard deviation of this distribution
+  $\begin{prompt}
+    \sigma= \answer{0.96}
+  \end{prompt}$ (round to 4 decimal places)
+
+
+\end{enumerate}
+
+
+\end{question}
+
+
+\begin{question}
+
+Consider the following graph:
+
+\begin{onlineOnly}
+$$\graph[xmin=-2,xmax=2,ymin=-0.5,ymax=1, panel]{N=e^{-x^2/2}/(2\pi)^{(0.5)}, P=\int_{z_1}^{z_2} N dx, a=-1, b=1, s=1, m=0, z_1=(a-m)/s, z_2=(b-m)/s, 0<y<N\{z_1<x<z_2\}}$$
+\end{onlineOnly}
+(This graph allows one to visualize and compute normally distributed probabilities.  Sliders $a$ and $b$ control the left and right endpoints, whereas $m, s$ denote the mean and standard deviation respectively.  Then $P$ is proportion of the normal curve between $a$ and $b$ with $z$-scores $z_1, z_2$ respectively.  A larger version of this graph may be found \href{https://www.desmos.com/calculator/y1pdds9uga}{here}.)
+
+
+Suppose that Kyle Sumner takes his new boat out into the water to catch yellowfin tuna, whose weights are normally distributed with mean 120 pounds and standard deviation 30 pounds.  
+
+\begin{enumerate}
+\item If Kyle catches a yellowfin, what is the probability that he catches a tuna between 120 and 140 pounds? $\begin{prompt}
+    P(120\leq X\leq 140)= \answer{0.2475}
+  \end{prompt}$ (round to 4 decimal places)
+  \item If Kyle catches 25 tuna,  what is the probability that their between 120 and 140 pounds? (use the Central Limit Theorem)\\ \\
+
+The tuna weight are normally distribution has standard deviation $\sigma=\answer{30}$.  By the Central Limit Theorem, the average weight of 25 tuna, are then normally distributed with the same mean as the original distribution, and standard deviation $\frac{\sigma}{\sqrt{n}}$, where $\sigma$ is the original standard deviation, and $n$ is the number of data points that are being averaged.  So in this case, if $\hat{X}$ is the average weight of 25 tuna, it is normally distributed with parameters:
+
+\begin{itemize}
+\item mean: $\bar{\hat{x}}=\answer{120}$.
+\item s.d.: $\hat{\sigma}=\frac{\sigma}{\sqrt{n}}=\frac{\answer{30}}{\answer{5}}=\answer{6}$.
+\end{itemize}
+
+Thus the probability that the average of 25 caught tuna would weigh between 120 and 150 pounds would be:
+
+  $\begin{prompt}
+    P(120\leq X\leq 140)= \answer{0.4996}
+  \end{prompt}$ (round to 4 decimal places)
+\end{enumerate}
+
+\end{question}
+
+
+
+\begin{question}
+Two candidates are running for office, Heather Thompson and David Cooper.  In a poll of 500 potential voters, 289 of them support Heather Thompson and 211 of them support David Cooper.  Can you with maximum acceptable error $\alpha=0.05$ claim that Heather Thompson will have majority support?
+
+\begin{itemize}
+\item The null hypothesis is $H_0:\hat{p}_0:=  \answer[]{0.5}$
+\item  The alternative hypothesis is of the form $H_1:$
+\begin{multipleChoice}
+\choice{$\hat{p}_0\neq\hat{p}$}
+\choice{$\hat{p}_0>\hat{p}$}
+\choice[correct]{$\hat{p}_0<\hat{p}$}
+\end{multipleChoice}
+\item The $p$-value for this problem is $p=\answer[]{0.0002}$ (round to 4 decimal places)
+\item Based on this computation, one can:
+\begin{multipleChoice}
+\choice[correct]{Accept that $H_1$ is true (with respect to the given $\alpha$).}
+\choice{Accept that $H_1$ is false (with respect to the given $\alpha$).}
+\choice{Accept that $H_1$ is not verified to be true (with respect to the given $\alpha$).}
+\end{multipleChoice}
+
+\end{itemize}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

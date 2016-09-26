@@ -1,0 +1,120 @@
+\documentclass{ximera}
+      
+\title{MAT 101 (Math Appreciation) Activity}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+Some sample questions that can be related to MAT 101.
+      
+\end{abstract}
+      
+\maketitle
+      
+      
+      
+\begin{question}
+Math majors of Imaginary College are voting on their favorite member of the math department.  The math department faculty are Dr.'s Jefferey Johnson, Charlie Katerba, Nhan Nguyen and Mary Riegel.  The students are asked to rank the professors from favorite to least, and the pluarity with elimination method is implemented.  Suppose that the initial votes are as follows:
+
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\multicolumn{1}{c}{}& \multicolumn{6}{c}{\textbf{Rankings}}\\
+\hline
+\textbf{Jeffery Johnson} &4 &3 &1 &3&2&4\\
+\textbf{Charlie Katerba} &2 &4 &2 &1&1&3\\
+\textbf{Nhan Nguyen}    &3 &1 &4 &4&3&2\\
+\textbf{Mary Riegel}       &1 &2 &3 &2&4&1\\
+\hline
+\# of Ballots                       &5 & 5 &  7 & 4&5&5\\
+\hline
+\end{tabular}
+Who gets selected to be the favorite mathematician?
+
+\begin{explanation}
+We begin by looking at the table above and see who got the least $\#1$ votes?  The number of $\#1$ votes received by each professor is:
+
+\begin{itemize}
+\item Jeffery Johnson: $\answer{7}$
+\item Charlie Katerba: $\answer{9}$
+\item Nhan Nguyen: $\answer{5}$
+\item Mary Riegel: $\answer{10}$
+\end{itemize}
+
+So Dr.\ Nguyen is removed from the ballot first.  Since he is no longer an option, the votes of the students shift accordingly:
+
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\multicolumn{1}{c}{}& \multicolumn{6}{c}{\textbf{Rankings}}\\
+\hline
+\textbf{Jeffery Johnson} &$\answer{3}$ &$\answer{2}$ &$\answer{1}$ &$\answer{3}$&$\answer{2}$&$\answer{3}$\\
+\textbf{Charlie Katerba} &$\answer{2}$ &$\answer{3}$ &$\answer{2}$ &$\answer{1}$&$\answer{1}$&$\answer{2}$\\
+\textbf{Mary Riegel}       &$\answer{1}$ &$\answer{1}$ &$\answer{3}$ &$\answer{2}$&$\answer{3}$&$\answer{1}$\\
+\hline
+\# of Ballots                       &5 & 5 &  7 & 4&5&5\\
+\hline
+\end{tabular}
+
+We then look at the remaining faculty and see that the number of $\#1$ votes for each is:
+
+\begin{itemize}
+\item Jeffery Johnson: $\answer{7}$
+\item Charlie Katerba: $\answer{9}$
+\item Mary Riegel: $\answer{15}$
+\end{itemize}
+
+Thus Dr.\ Johnson is now removed from the ballot. Once again the remaining votes are distributed:
+
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\multicolumn{1}{c}{}& \multicolumn{6}{c}{\textbf{Rankings}}\\
+\hline
+\textbf{Charlie Katerba} &$\answer{2}$ &$\answer{2}$ &$\answer{1}$ &$\answer{1}$&$\answer{1}$&$\answer{2}$\\
+\textbf{Mary Riegel}       &$\answer{1}$ &$\answer{1}$ &$\answer{2}$ &$\answer{2}$&$\answer{2}$&$\answer{1}$\\
+\hline
+\# of Ballots                       &5 & 5 &  7 & 4&5&5\\
+\hline
+\end{tabular}
+
+Now, we simply count the $\#1$ votes, and we have:
+
+\begin{itemize}
+\item Charlie Katerba: $\answer{16}$
+\item Mary Riegel: $\answer{15}$
+\end{itemize}
+
+So Dr.\ Charlie Katerba is the favorite mathematician of Imaginary College!
+
+
+\end{explanation}
+
+
+
+
+\end{question}      
+
+\begin{question}
+What is $324 \mod 5$?
+\begin{explanation}
+By the division algorithm, we note that there is are unique integers $m, r$ where $0\leq r<5$ and $324=m\cdot 5+r$.  But notice that $$324=320+\answer{4}=\answer{64}\cdot 5+\answer{4}.$$  Thus $324 \mod 5=\answer{4}$.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Suppose that $\$25,000$ is deposited into a bank account that earns $6\%$ annual interest compounded quarterly.  If the account is left alone for 5 years, how much money will be in the account?
+
+\begin{explanation}
+Compounding quarterly means compounded $\answer{4}$ times a year.  So after 5 years, the interest would have been compounded $\answer{20}$ times.  Each time it compounds, the $6\%$ annual interest is divided into $\answer{4}$ for an evaluation of $\answer{1.5}\%$ each compounding.  This results in: $$\text{Future Value}=\$\answer{25000}(1+\answer{0.015})^{\answer{20}}\approx\$\answer{33671.38}\ \text{ (round to nearest 2 decimals).}$$
+\end{explanation}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
