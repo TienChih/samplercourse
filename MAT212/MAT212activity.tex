@@ -1,5 +1,8 @@
 \documentclass{ximera}
       
+  \input{../preamble.tex}
+
+      
 \title{MAT 212 (Calculus II) Activity}
       
       
@@ -46,9 +49,10 @@ C&=&\answer{2}.
 Unfortunately, there are no other roots of our linear factors, and we have not yet obtained $B$.  However, by evaluating this equality for any other value $x$ and using the values for $A$ and $C$, we can obtain a linear equation for $B$.  Let's try $x=2$:
 
 \begin{eqnarray*}
-\answer{5}&=&\answer{1}A+\answer{2}B+\answer{2}C,\ \text{then by plugging in $A,C$:}\\
+\answer{5}&=&\answer{1}A+\answer{2}B+\answer{2}C,\\
+&& \text{then by plugging in $A,C$:}\\
 \answer{5}&=&\answer{1}+\answer{2}B+\answer{4}\\
-B=\answer{0}
+B&=&\answer{0}
 \end{eqnarray*}
 
 \textbf{ALTERNATIVELY} We notice that:
@@ -63,21 +67,23 @@ x^2+1&=&(\answer{1}A+\answer{1}B+\answer{0}C)x^2\\
 Recall that we observed that this was an equality of functions.  Specifically it's an equality of quadratic functions.  Any pair of polynomials, including quadratics, are equal if and only if their coefficients are equal.  Thus, we are able to obtain the following system of equations:
 
 \begin{eqnarray*}
-\answer{1}A+\answer{1}B+\answer{0}C&=&1,\ \text{(The coefficients of $x^2$)}\\
-\answer{-2}A+\answer{-1}B+\answer{1}C&=&0,\ \text{(The coefficients of $x$)}\\
-\answer{1}A+\answer{0}B+\answer{0}C&=&1,\ \text{(The coefficients of $1$)}\\
+\answer{1}A+\answer{1}B+\answer{0}C&=&1,\\ \text{(The coefficients of $x^2$)}&&\\
+\answer{-2}A+\answer{-1}B+\answer{1}C&=&0,\\ \text{(The coefficients of $x$)}&&\\
+\answer{1}A+\answer{0}B+\answer{0}C&=&1,\\  \text{(The coefficients of $1$)}&&\\
 \end{eqnarray*}
 Which has solution: $A=\answer{1}, B=\answer{0}, C=\answer{2}$.
 
 Either way you go, this gives us the decomposition:
 
 \begin{eqnarray*}
-\frac{x^2+1}{x^3-2x^2+x}&=& \frac{A}{x}+\frac{B}{x-1}+\frac{C}{(x-1)^2}\\
+&&\frac{x^2+1}{x^3-2x^2+x}\\
+&=& \frac{A}{x}+\frac{B}{x-1}+\frac{C}{(x-1)^2}\\
 &=& \frac{\answer{1}}{x}+\frac{\answer{0}}{x-1}+\frac{\answer{2}}{(x-1)^2}\\
 &&\text{Then we integrate both sides:}\\
-\int \frac{x^2+1}{x^3-2x^2+x}\ dx &=& \int \frac{\answer{1}}{x}+\frac{\answer{0}}{x-1}+\frac{\answer{2}}{(x-1)^2}\ dx\\
+&&\int \frac{x^2+1}{x^3-2x^2+x}\ dx \\
+&=& \int \frac{\answer{1}}{x}+\frac{\answer{0}}{x-1}+\frac{\answer{2}}{(x-1)^2}\ dx\\
 &&\text{By the linearity of integration:}\\
-&=& \int \frac{\answer{1}}{x}\ dx+\int \frac{\answer{0}}{x-1}\ dx+\int\frac{\answer{2}}{(x-1)^2}\ dx\\
+&=& \int \frac{\answer{1}}{x}\ dx \\ &&+\int \frac{\answer{0}}{x-1}\ dx\\ &&+\int\frac{\answer{2}}{(x-1)^2}\ dx\\
 &=& \answer{\ln|x|}+\answer{0}+\answer{\frac{-2}{x-2}}+C
 \end{eqnarray*}
 
@@ -94,7 +100,7 @@ Consider the region bounded by $y=\sqrt{x}$ and $y=x/2$.
 This should be a simple review exercise, and certainly wouldn't require the use of technology.  However, it is a good opportunity to get familiar with available tools.  Use the Desmos box below and sketch the two curves.
 
 \begin{onlineOnly}
-$$\graph[xmin=-1,xmax=10, panel]{}$$
+$$\graph[xmin=-1,xmax=10, panel]{y=x/2,y=sqrt{x}}$$
 \end{onlineOnly}
 
 By either observing the graph or through algebra, we notice that these curves intersect at (left most point) $(\answer{0}, \answer{0})$ and (right most point) $(\answer{4}, \answer{2})$
@@ -107,8 +113,9 @@ By either observing the graph or through algebra, we notice that these curves in
 Using the washer method, we note that the $x$ values in question will range from $\answer{0}$ to $\answer{4}$.  We also know that the outer radius of our washers will be $y_1=\answer{\sqrt{x}}$ and the inner radius will be $y_2=\answer{x/2}$.  So each ``slice" will have the area of a circle with the outer radius, subtracting the area of the interior circle.  Thus the volume is:
 
 \begin{eqnarray*}
-\int_a^b \pi(y_1^2-y_2^2)\ dx&=&\int_{\answer{0}}^{\answer{4}} \pi\left(   \left( \answer{\sqrt{x}}\right)^2  - \left( \answer{x/2}\right)^2   \right)\ dx\\
-&=&\int_{\answer{0}}^{\answer{4}} \pi(x-x^2/4)\ dx\\
+&&\int_a^b \pi(y_1^2-y_2^2)\ dx\\
+&=&\int_{\answer{0}}^{\answer{4}} \pi\left(   \left( \answer{\sqrt{x}}\right)^2  - \left( \answer{x/2}\right)^2   \right)\ dx\\
+&=&\int_{\answer{0}}^{\answer{4}} \pi(\answer{x-x^2/4})\ dx\\
 &=&\answer{\pi(x^2/2-x^3/12)}\big|_{\answer{0}}^{\answer{4}}\\
 &=&\answer{8\pi/3}.
 \end{eqnarray*}
@@ -123,8 +130,9 @@ Using the washer method, we note that the $x$ values in question will range from
 Using the washer method, we note that the $y$ values in question will range from $\answer{0}$ to $\answer{2}$.  We also know that the outer radius of our washers will be $x_1=\answer{2y}$ and the inner radius will be $x_2=\answer{y^2}$.  So each ``slice" will have the area of a circle with the outer radius, subtracting the area of the interior circle.  Thus the volume is:
 
 \begin{eqnarray*}
-\int_a^b \pi(x_1^2-x_2^2)\ dy&=&\int_{\answer{0}}^{\answer{2}} \pi\left(   \left( \answer{2y}\right)^2  - \left( \answer{y^2}\right)^2   \right)\ dy\\
-&=&\int_{\answer{0}}^{\answer{2}} \pi(4y^2-y^4)\ dy\\
+&&\int_a^b \pi(x_1^2-x_2^2)\ dy\\
+&=&\int_{\answer{0}}^{\answer{2}} \pi\left(   \left( \answer{2y}\right)^2  - \left( \answer{y^2}\right)^2   \right)\ dy\\
+&=&\int_{\answer{0}}^{\answer{2}} \pi(\answer{4y^2-y^4})\ dy\\
 &=&\answer{\pi(4y^3/3-y^5/5)}\big|_{\answer{0}}^{\answer{2}}\\
 &=&\answer{64\pi/15}.
 \end{eqnarray*}
@@ -138,7 +146,8 @@ Using the washer method, we note that the $y$ values in question will range from
 As our cylinders expand, our radii begin at $y=\answer{0}$ and stop when $y=\answer{2}$.  The height of each cylinder is the ``upper" function $x_1=\answer{2y}$ minus the ``lower" function $x_2=\answer{y^2}$.  Each circular ``slice" will have area equal to the height of the cylindrical slice, times the circumference of the slice.  Thus the volume is:
 
 \begin{eqnarray*}
-\int_a^b 2\pi y(x_1-x_2)\ dy&=&\int_{\answer{0}}^{\answer{2}}2\pi y(\answer{2y}-\answer{y^2})\ dy\\
+&&\int_a^b 2\pi y(x_1-x_2)\ dy\\
+&=&\int_{\answer{0}}^{\answer{2}}2\pi y(\answer{2y}-\answer{y^2})\ dy\\
 &=&\int_{\answer{0}}^{\answer{2}}\pi (\answer{4y^2-2y^3})\ dy\\
 &=&\answer{\pi(4y^3/3-y^4/2)}\big|_{\answer{0}}^{\answer{2}}\\
 &=&\answer{8\pi/3}
@@ -154,7 +163,8 @@ As our cylinders expand, our radii begin at $y=\answer{0}$ and stop when $y=\ans
 As our cylinders expand, our radii begin at $x=\answer{0}$ and stop when $y=\answer{4}$.  The height of each cylinder is the ``upper" function $y_1=\answer{\sqrt{x}}$ minus the ``lower" function $y_2=\answer{x/2}$.  Each circular ``slice" will have area equal to the height of the cylindrical slice, times the circumference of the slice.  Thus the volume is:
 
 \begin{eqnarray*}
-\int_a^b 2\pi x(y_1-y_x)\ dy&=&\int_{\answer{0}}^{\answer{4}}2\pi x(\answer{\sqrt{x}}-\answer{x/2})\ dx\\
+&&\int_a^b 2\pi x(y_1-y_x)\ dy\\
+&=&\int_{\answer{0}}^{\answer{4}}2\pi x(\answer{\sqrt{x}}-\answer{x/2})\ dx\\
 &=&\int_{\answer{0}}^{\answer{4}}\pi (\answer{2x^{3/2}-x^2})\ dx\\
 &=&\answer{\pi(4x^{5/2}/5-x^3/3)}\big|_{\answer{0}}^{\answer{4}}\\
 &=&\answer{64\pi/15}

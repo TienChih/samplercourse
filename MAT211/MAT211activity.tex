@@ -1,4 +1,8 @@
 \documentclass{ximera}
+ 
+ 
+ \input{../preamble.tex}
+ 
       
 \title{MAT 211 (Calculus I) Activity}
       
@@ -54,8 +58,7 @@ Consider the function $f(x)=\sqrt{x}$.
 \begin{onlineOnly}
 $$\graph[xmin=-1,xmax=10, panel]{f(x)=x^{.5},m=(f(a+h)-f(a))/h,  y=m(x-a)+f(a), a=0, h=1}$$
 \end{onlineOnly}
-(Use the sliders for $a$ and $h$ to find the point where you wish to estimate the derivative and the accuracy of that estimate.  Note that you may change $f(x)$ to do the same estimations with other functions.  \href{https://www.desmos.com/calculator/1tkd8mob7k}{A fully functional version of this graph may be found here.})
-
+(Use the sliders for $a$ and $h$ to find the point where you wish to estimate the derivative and the accuracy of that estimate.  Note that you may change $f(x)$ to do the same estimations with other functions.  A fully functional version of this graph may be found here: \url{https://www.desmos.com/calculator/1tkd8mob7k}.)
 
 Recall that the difference quotient for any function $f$ when $x=a$ and given some real number $h$ is $$\frac{f(a+h)-f(a)}{h}$$
 
@@ -155,7 +158,7 @@ That's not good!  But it get's worse.  What about when you're 5 feet off the gro
 Consider $f(x)=x^2-3x$
 
 \begin{onlineOnly}
-$$\graph[xmin=-1, xmax=7, panel]{f(x)=x^2-3x}$$
+$$\graph[xmin=-1, xmax=7, panel]{F=x^2-3x, F<y<0\left\{0<x<3\right\},0<y<F\left\{3<x<6\right\}}$$
 \end{onlineOnly}
 (The above graph shows the curve $y=f(x)$. Go  \url{https://www.desmos.com/calculator/o2jdhyeocq} for a version of this graph that visualizes and computes  the Riemann sums.  Use $a, b$ to adjust your end points, $n$ for the number of rectangles, and $c$ for the method (left, right or midpoint).  One may also adjust $f(x)$ to do the same for other graphs.)
 
